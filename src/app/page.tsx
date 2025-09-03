@@ -75,11 +75,11 @@ export default async function Home() {
         
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            {homeData.heroHeadline || 'Elevate Your Growth with'} {" "}
-            <span className="text-primary">{homeData.heroSubheading || 'Fractional CMO Leadership'}</span>
+            {homeData.heroHeadline || 'Transform Your Digital Presence with'} {" "}
+            <span className="text-primary">{homeData.heroSubheading || 'Expert Design & Development'}</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            {homeData.heroDescription || 'Executive marketing strategy without the full-time cost.'}
+            {homeData.heroDescription || 'Professional web design and development services that drive results.'}
           </p>
           
           {/* Hero Image Display */}
@@ -98,7 +98,7 @@ export default async function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" asChild>
               <Link href={homeData.heroCallToAction?.buttonLink || '/contact'}>
-                {homeData.heroCallToAction?.buttonText || 'Schedule a Free Strategy Call'}
+                {homeData.heroCallToAction?.buttonText || 'Start Your Project'}
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
@@ -119,15 +119,15 @@ export default async function Home() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">3x</div>
-                <div className="text-muted-foreground">Leads Generated</div>
+                <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                <div className="text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">200%</div>
-                <div className="text-muted-foreground">Revenue Growth</div>
+                <div className="text-3xl font-bold text-primary mb-2">100%</div>
+                <div className="text-muted-foreground">Client Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary mb-2">20+</div>
+                <div className="text-3xl font-bold text-primary mb-2">5+</div>
                 <div className="text-muted-foreground">Years Experience</div>
               </div>
             </div>
@@ -140,11 +140,11 @@ export default async function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Strategic Marketing Leadership
+              Design & Development Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              From strategy development to team leadership, I help businesses 
-              achieve predictable, sustainable growth.
+              From custom web design to full-stack development, we help businesses 
+              create powerful digital experiences that convert.
             </p>
           </div>
           
@@ -156,8 +156,8 @@ export default async function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold mb-2">Fractional CMO Leadership</h3>
-                <p className="text-sm text-muted-foreground">Executive-level strategic guidance without the full-time investment</p>
+                <h3 className="font-semibold mb-2">Custom Web Design</h3>
+                <p className="text-sm text-muted-foreground">Beautiful, responsive websites that convert visitors into customers</p>
               </CardContent>
             </Card>
             
@@ -168,8 +168,8 @@ export default async function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold mb-2">Marketing Strategy</h3>
-                <p className="text-sm text-muted-foreground">Data-driven frameworks tailored to your business goals</p>
+                <h3 className="font-semibold mb-2">Full-Stack Development</h3>
+                <p className="text-sm text-muted-foreground">Modern web applications with robust backend systems</p>
               </CardContent>
             </Card>
             
@@ -180,8 +180,8 @@ export default async function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="font-semibold mb-2">Team Leadership</h3>
-                <p className="text-sm text-muted-foreground">Coaching and aligning marketing teams with sales objectives</p>
+                <h3 className="font-semibold mb-2">E-commerce Solutions</h3>
+                <p className="text-sm text-muted-foreground">Complete online stores that drive sales and growth</p>
               </CardContent>
             </Card>
             
@@ -192,8 +192,8 @@ export default async function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
                 </div>
-                <h3 className="font-semibold mb-2">Funnel Building</h3>
-                <p className="text-sm text-muted-foreground">High-converting campaigns across digital channels</p>
+                <h3 className="font-semibold mb-2">CMS Integration</h3>
+                <p className="text-sm text-muted-foreground">Content management systems that make updates easy</p>
               </CardContent>
             </Card>
           </div>
@@ -225,8 +225,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "Brian transformed our marketing approach. We went from struggling 
-                  with lead generation to having a predictable pipeline of qualified prospects."
+                  "Crafted Group transformed our online presence. We went from struggling 
+                  with an outdated website to having a modern, converting digital experience."
                 </p>
               </CardContent>
             </Card>
@@ -243,8 +243,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "The strategic framework Brian developed helped us scale from $500K 
-                  to $2M ARR in 18 months. His expertise is invaluable."
+                  "The e-commerce platform Crafted Group built helped us scale from $100K 
+                  to $1M in online sales in 12 months. Their expertise is invaluable."
                 </p>
               </CardContent>
             </Card>
@@ -261,8 +261,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "Working with Brian was like having a seasoned marketing executive 
-                  on our team. His guidance elevated our entire marketing function."
+                  "Working with Crafted Group was like having a seasoned development team 
+                  on our side. Their expertise elevated our entire digital presence."
                 </p>
               </CardContent>
             </Card>
@@ -274,13 +274,13 @@ export default async function Home() {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Marketing?
+            Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's discuss how fractional CMO leadership can accelerate your growth.
+            Let's discuss how expert design and development can accelerate your business.
           </p>
           <Button size="lg" asChild>
-            <Link href="/contact">Book Your Free Strategy Call</Link>
+            <Link href="/contact">Start Your Project</Link>
           </Button>
         </div>
       </section>
