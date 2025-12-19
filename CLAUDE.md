@@ -171,6 +171,14 @@ npm run dev          # Start development server (port 3000/3001)
 npm run build        # Build for production
 npm run lint         # Run ESLint
 npm run setup        # First-time developer setup
+npm run seo:audit    # Run on-site SEO audit and write seo-report.json
+npm run seo:audit:notion  # Send SEO audit report to Notion as formatted page
+```
+
+### Slash Commands
+```bash
+/run-audit           # Run SEO audit (checks dev server, runs audit, shows summary)
+/run-audit --notion  # Run SEO audit and send results to Notion
 ```
 
 ### Content Management
@@ -189,6 +197,53 @@ npm run env:validate    # Configure environment variables
 npm run check:content   # Validate CMS content
 ```
 
+---
+
+## SEO & Content Strategy Agents
+
+### SEO Audit Agent
+
+- **Purpose:** Analyze on-site SEO for key routes (titles, meta descriptions, headings, lang, canonical, links, images, and schema.org JSON-LD).
+- **Command:** `npm run dev` (in one terminal) then `npm run seo:audit` (in another).
+- **Behavior:**
+  - Crawls the configured routes (default: `/`, `/about`, `/services`, `/case-studies`, `/pricing`, `/blog`, `/contact`, `/privacy`, `/terms`) against `SEO_AUDIT_BASE_URL` (default `http://localhost:3000`).
+  - Writes a structured report to `seo-report.json` with per-page issues and metadata.
+- **Claude usage:**
+  1. Ensure the dev server is running.
+  2. Run `npm run seo:audit` and open `seo-report.json`.
+  3. Prioritize fixes by severity (high → medium → low) and suggest concrete code/content changes referencing:
+     - `src/app/layout.tsx` (global meta/HTML)
+     - individual page components in `src/app/**/page.tsx`
+     - Sanity schemas in `sanity/schemaTypes/**` for structural content issues.
+- **Notion Integration:** After running `npm run seo:audit`, you can send the report to Notion with `npm run seo:audit:notion`. Requires:
+  - `NOTION_API_TOKEN` in `.env.local` (get from https://www.notion.so/my-integrations)
+  - Either `NOTION_PAGE_ID` (to create a child page) or `NOTION_DATABASE_ID` (to create a page in a database)
+  - The script formats the report as a Notion page with headings, callouts, and to-do items for each issue.
+  - **Database Properties:** When using a database, the script automatically populates properties by detecting your schema. It tries to match common property names:
+    - **Site/Website/Domain** (select, multi_select, or text) - Site identifier
+    - **Date/Audit Date** (date) - Audit date
+    - **Issues/Total Issues** (number) - Total issue count
+    - **High/High Issues** (number) - Critical issues count
+    - **Medium/Medium Issues** (number) - Medium issues count
+    - **Low/Low Issues** (number) - Low issues count
+    - **Status** (select) - Defaults to "To Review"
+    - **URL/Base URL** (url or text) - Base URL audited
+    - **Pages/Pages Audited** (number) - Number of pages audited
+
+### Content Strategist Agent
+
+- **Purpose:** Turn SEO insights into a prioritized editorial calendar and article list for the website.
+- **Inputs:** `seo-report.json`, `CONTENT_MIGRATION_GUIDE.md`, blog schemas (`sanity/schemaTypes/post.ts`, `sanity/schemaTypes/pages/blogPage.ts`), and existing content.
+- **Claude usage:**
+  1. Read `seo-report.json` to identify keyword/topic gaps, pages without strong meta, and sections needing depth.
+  2. Propose a list of articles grouped by theme (e.g., Fractional CMO, team leadership, funnel building) with:
+     - Working title
+     - Target keyword + intent
+     - Primary URL target (new blog post or support existing page)
+     - 3–5 bullet outline
+  3. Map each idea to Sanity structures (categories, tags, authors) so it can be implemented easily via `sanity/schemaTypes/post.ts`.
+
+
 ### Sanity Studio
 ```bash
 npm run sanity:dev     # Start Sanity Studio locally
@@ -206,6 +261,13 @@ NEXT_PUBLIC_SANITY_PROJECT_ID=     # From sanity.io/manage
 NEXT_PUBLIC_SANITY_DATASET=        # Default: "production"
 NEXT_PUBLIC_SANITY_API_VERSION=    # Default: "2024-01-01"
 SANITY_API_TOKEN=                  # For write operations (optional)
+```
+
+Optional (for Notion integration):
+```bash
+NOTION_API_TOKEN=                  # From notion.so/my-integrations
+NOTION_PAGE_ID=                    # Existing page ID to create child page under
+NOTION_DATABASE_ID=                # Database ID to create page in (alternative to PAGE_ID)
 ```
 
 ---
