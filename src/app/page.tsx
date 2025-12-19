@@ -43,7 +43,7 @@ interface HomePageData {
   seo?: {
     metaTitle?: string;
     metaDescription?: string;
-    ogImage?: any;
+    ogImage?: { asset?: { _ref?: string } };
   };
 }
 

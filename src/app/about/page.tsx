@@ -6,6 +6,7 @@ import { fetchData } from "../../../sanity/client";
 import { aboutPageQuery } from "../../../sanity/lib/queries";
 import { PortableText } from "@/components/portable-text";
 import { HeroSection } from "@/components/hero-section";
+import type { PortableTextBlock } from "@portabletext/types";
 
 export const metadata: Metadata = {
   title: "About Us - Web Design & Development Experts",
@@ -22,17 +23,17 @@ interface AboutPageData {
   pageTitle: string;
   pageSubtitle?: string;
   heroImage?: string;
-  personalStory?: any;
+  personalStory?: PortableTextBlock[];
   experienceTitle?: string;
-  experienceContent?: any;
+  experienceContent?: PortableTextBlock[];
   expertiseTitle?: string;
   expertiseAreas?: Array<{
     area: string;
     description: string;
-    icon?: any;
+    icon?: string;
   }>;
   philosophyTitle?: string;
-  philosophy?: any;
+  philosophy?: PortableTextBlock[];
   locationInfo?: string;
   callToAction?: {
     title: string;
@@ -43,7 +44,7 @@ interface AboutPageData {
   seo?: {
     metaTitle?: string;
     metaDescription?: string;
-    ogImage?: any;
+    ogImage?: { asset?: { _ref?: string } };
   };
 }
 
@@ -141,7 +142,7 @@ export default async function About() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {aboutData.expertiseAreas.map((expertise: any, index: number) => (
+              {aboutData.expertiseAreas.map((expertise, index) => (
                 <Card key={index} className="p-8">
                   <CardContent className="p-0">
                     <div className="flex items-center mb-4">

@@ -1,7 +1,7 @@
 'use client'
 
-import { PortableText as PortableTextComponent } from '@portabletext/react'
-import { PortableTextComponents } from '@portabletext/react'
+import { PortableText as PortableTextComponent, PortableTextComponents } from '@portabletext/react'
+import type { PortableTextBlock } from '@portabletext/types'
 
 const components: PortableTextComponents = {
   block: {
@@ -41,7 +41,7 @@ const components: PortableTextComponents = {
 }
 
 interface PortableTextProps {
-  value: any
+  value: PortableTextBlock[] | undefined
   className?: string
 }
 

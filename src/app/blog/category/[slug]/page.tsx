@@ -9,9 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { BlogPost, Category } from "../../../../../types/blog";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 async function getCategory(slug: string): Promise<Category | null> {
@@ -31,7 +31,8 @@ function formatDate(dateString: string) {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const category = await getCategory(params.slug);
+  const { slug } = await params;
+  const category = await getCategory(slug);
 
   if (!category) {
     return {
@@ -103,13 +104,14 @@ function PostCard({ post }: { post: BlogPost }) {
 }
 
 export default async function CategoryPage({ params }: Props) {
-  const category = await getCategory(params.slug);
+  const { slug } = await params;
+  const category = await getCategory(slug);
 
   if (!category) {
     notFound();
   }
 
-  const posts = await getPostsByCategory(params.slug);
+  const posts = await getPostsByCategory(slug);
 
   return (
     <div className="flex flex-col">
