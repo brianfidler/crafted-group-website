@@ -1,8 +1,17 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchData } from "../../sanity/client";
 import { homePageQuery } from "../../sanity/lib/queries";
+
+export const metadata: Metadata = {
+  title: "Web Design & Development Services",
+  description: "Transform your digital presence with expert web design and development. Custom websites, full-stack applications, and e-commerce solutions that drive results.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 // Type for Home page data
 interface HomePageData {

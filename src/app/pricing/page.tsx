@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Pricing - Web Design & Development Plans",
+  description: "Transparent pricing for web design and development services. Choose from flexible engagement models designed for startups and growing businesses.",
+  alternates: {
+    canonical: "/pricing",
+  },
+};
 
 export default function Pricing() {
   return (

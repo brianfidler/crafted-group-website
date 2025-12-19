@@ -1,10 +1,19 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { fetchData } from "../../../sanity/client";
 import { aboutPageQuery } from "../../../sanity/lib/queries";
 import { PortableText } from "@/components/portable-text";
 import { HeroSection } from "@/components/hero-section";
+
+export const metadata: Metadata = {
+  title: "About Us - Web Design & Development Experts",
+  description: "Learn about Crafted Group and our approach to web design and development. Discover how we help businesses create powerful digital experiences.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 // Type for About page data
 interface AboutPageData {

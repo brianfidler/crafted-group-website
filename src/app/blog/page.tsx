@@ -1,11 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import { client } from "../../../sanity/client";
 import { postsQuery, featuredPostsQuery, categoriesQuery } from "../../../sanity/lib/queries";
 import { urlForImage } from "../../../sanity/lib/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { BlogPost, Category } from "../../../types/blog";
+
+export const metadata: Metadata = {
+  title: "Blog - Web Design & Development Insights",
+  description: "Insights and articles on web design, development best practices, and digital strategy. Learn from our experience building successful web projects.",
+  alternates: {
+    canonical: "/blog",
+  },
+};
 
 async function getPosts(): Promise<BlogPost[]> {
   return client.fetch(postsQuery);

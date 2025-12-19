@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Web Design & Development Services",
+  description: "Comprehensive web design and development services including custom websites, full-stack applications, e-commerce solutions, and CMS integration.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 export default function Services() {
   return (

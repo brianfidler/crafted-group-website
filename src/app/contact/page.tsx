@@ -47,6 +47,7 @@ export default function Contact() {
       {/* Contact Options */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
+          <h2 className="sr-only">Contact Options</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>

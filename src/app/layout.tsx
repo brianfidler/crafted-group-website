@@ -15,8 +15,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Crafted Group - Fractional CMO Services",
-  description: "Executive marketing strategy without the full-time cost. Helping startups and growing businesses achieve sustainable, revenue-driven growth.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://crafted.group"),
+  title: {
+    default: "Crafted Group | Web Design & Development Services",
+    template: "%s | Crafted Group",
+  },
+  description: "Professional web design and development services. Custom websites, full-stack applications, e-commerce solutions, and CMS integration for growing businesses.",
+  keywords: ["web design", "web development", "custom websites", "e-commerce", "CMS integration", "full-stack development"],
+  authors: [{ name: "Crafted Group" }],
+  creator: "Crafted Group",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Crafted Group",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+// JSON-LD structured data for Organization
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Crafted Group",
+  description: "Professional web design and development services for growing businesses.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://crafted.group",
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://crafted.group"}/logo.png`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "hello@crafted.group",
+    contactType: "customer service",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Phoenix",
+    addressRegion: "AZ",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://linkedin.com/in/brianfidler",
+  ],
 };
 
 export default function RootLayout({
@@ -26,6 +72,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

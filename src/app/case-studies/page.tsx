@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Case Studies - Web Design Portfolio & Results",
+  description: "Explore our portfolio of successful web design and development projects. Real results and client success stories across various industries.",
+  alternates: {
+    canonical: "/case-studies",
+  },
+};
 
 export default function CaseStudies() {
   return (
@@ -30,7 +39,7 @@ export default function CaseStudies() {
                 <div className="bg-muted/50 p-8 flex items-center">
                   <div>
                     <div className="text-sm text-primary font-medium mb-2">SaaS • Series A</div>
-                    <h3 className="text-2xl font-bold mb-4">TechStart Inc.</h3>
+                    <h2 className="text-2xl font-bold mb-4">TechStart Inc.</h2>
                     <p className="text-muted-foreground leading-relaxed">
                       A B2B SaaS company struggling with lead quality and lengthy sales cycles. 
                       Revenue had plateaued at $500K ARR despite significant product development investment.
@@ -40,7 +49,7 @@ export default function CaseStudies() {
                 <div className="p-8">
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold mb-3">The Challenge</h4>
+                      <h3 className="font-semibold mb-3">The Challenge</h3>
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         <li>• Poor lead quality resulting in 3% conversion rate</li>
                         <li>• 180-day average sales cycle</li>
@@ -50,7 +59,7 @@ export default function CaseStudies() {
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-3">The Results</h4>
+                      <h3 className="font-semibold mb-3">The Results</h3>
                       <div className="grid grid-cols-3 gap-4 mb-4">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-primary">300%</div>
@@ -82,7 +91,7 @@ export default function CaseStudies() {
                 <div className="p-8 order-2 lg:order-1">
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold mb-3">The Challenge</h4>
+                      <h3 className="font-semibold mb-3">The Challenge</h3>
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         <li>• High customer acquisition costs ($450 CAC)</li>
                         <li>• 15% cart abandonment rate</li>
@@ -92,7 +101,7 @@ export default function CaseStudies() {
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-3">The Results</h4>
+                      <h3 className="font-semibold mb-3">The Results</h3>
                       <div className="grid grid-cols-3 gap-4 mb-4">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-primary">65%</div>
@@ -118,7 +127,7 @@ export default function CaseStudies() {
                 <div className="bg-muted/50 p-8 flex items-center order-1 lg:order-2">
                   <div>
                     <div className="text-sm text-primary font-medium mb-2">E-commerce • Growth Stage</div>
-                    <h3 className="text-2xl font-bold mb-4">GrowthCorp</h3>
+                    <h2 className="text-2xl font-bold mb-4">GrowthCorp</h2>
                     <p className="text-muted-foreground leading-relaxed">
                       A direct-to-consumer e-commerce brand with strong products but inefficient 
                       marketing spend and suboptimal conversion rates across their funnel.
@@ -134,7 +143,7 @@ export default function CaseStudies() {
                 <div className="bg-muted/50 p-8 flex items-center">
                   <div>
                     <div className="text-sm text-primary font-medium mb-2">Professional Services • Enterprise</div>
-                    <h3 className="text-2xl font-bold mb-4">InnovateNow Consulting</h3>
+                    <h2 className="text-2xl font-bold mb-4">InnovateNow Consulting</h2>
                     <p className="text-muted-foreground leading-relaxed">
                       A management consulting firm struggling to differentiate in a crowded market 
                       and lacking thought leadership presence to command premium pricing.
@@ -144,7 +153,7 @@ export default function CaseStudies() {
                 <div className="p-8">
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold mb-3">The Challenge</h4>
+                      <h3 className="font-semibold mb-3">The Challenge</h3>
                       <ul className="space-y-2 text-sm text-muted-foreground">
                         <li>• Commoditized pricing pressure</li>
                         <li>• No digital thought leadership presence</li>
@@ -154,7 +163,7 @@ export default function CaseStudies() {
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold mb-3">The Results</h4>
+                      <h3 className="font-semibold mb-3">The Results</h3>
                       <div className="grid grid-cols-3 gap-4 mb-4">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-primary">150%</div>
