@@ -13,6 +13,12 @@
     "backup:sanity": "node scripts/backup-sanity.js",
     "restore:sanity": "node scripts/restore-sanity.js",
     "fix:all": "node scripts/fix-all.js",
+    "backup:verify": "node scripts/backup-verify.js",
+    "pre-deploy:check": "node scripts/pre-deploy-check.js",
+    "schema:validate": "node scripts/schema-validate.js",
+    "content:audit": "node scripts/content-audit.js",
+    "link:check": "node scripts/link-check.js",
+    "setup:mcp": "node scripts/setup-mcp.js",
     "sanity:dev": "sanity dev",
     "sanity:build": "sanity build",
     "sanity:deploy": "sanity deploy",
@@ -23,7 +29,9 @@
     "fix:faqs": "node scripts/fix-faqs.js",
     "create:blog": "node scripts/create-blog-post.js",
     "fix:blog-keys": "node scripts/fix-blog-keys.js",
-    "check:content": "node scripts/check-content.js"
+    "check:content": "node scripts/check-content.js",
+    "seo:audit": "node scripts/seo-audit.js",
+    "seo:audit:notion": "node scripts/seo-audit-to-notion.js"
   },
   "dependencies": {
     "@portabletext/react": "^3.2.1",
@@ -34,6 +42,8 @@
     "@sanity/client": "^7.8.2",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^4.3.0",
+    "@notionhq/client": "^2.2.15",
+    "cheerio": "^1.0.0-rc.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.1",
