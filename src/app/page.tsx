@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -95,10 +96,11 @@ export default async function Home() {
           {homeData.heroImage && (
             <div className="flex justify-center mb-12">
               <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
-                <img 
-                  src={homeData.heroImage} 
+                <Image
+                  src={homeData.heroImage}
                   alt={homeData.heroHeadline || 'Fractional CMO Leadership'}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
             </div>

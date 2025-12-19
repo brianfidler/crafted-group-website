@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -63,10 +64,11 @@ export function HeroSection({
         {heroImage && showProfileImage && (
           <div className="flex justify-center mb-12">
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg">
-              <img 
-                src={heroImage} 
+              <Image
+                src={heroImage}
                 alt={title}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
