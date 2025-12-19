@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Case Studies - Web Design Portfolio & Results",
@@ -75,8 +75,8 @@ export default function CaseStudies() {
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        "Brian transformed our entire go-to-market strategy. We now have a predictable 
-                        pipeline and our sales team actually thanks marketing for the quality of leads."
+                        &quot;Brian transformed our entire go-to-market strategy. We now have a predictable
+                        pipeline and our sales team actually thanks marketing for the quality of leads.&quot;
                       </p>
                       <p className="text-sm font-medium mt-2">— Sarah Brown, CEO</p>
                     </div>
@@ -117,8 +117,8 @@ export default function CaseStudies() {
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        "The comprehensive funnel optimization Brian implemented transformed our 
-                        entire customer journey. ROI improved dramatically across all channels."
+                        &quot;The comprehensive funnel optimization Brian implemented transformed our
+                        entire customer journey. ROI improved dramatically across all channels.&quot;
                       </p>
                       <p className="text-sm font-medium mt-2">— Mike Johnson, Founder</p>
                     </div>
@@ -179,8 +179,8 @@ export default function CaseStudies() {
                         </div>
                       </div>
                       <p className="text-sm text-muted-foreground">
-                        "Brian helped us build a thought leadership platform that positioned us as 
-                        industry experts. We now attract higher-value clients who seek us out."
+                        &quot;Brian helped us build a thought leadership platform that positioned us as
+                        industry experts. We now attract higher-value clients who seek us out.&quot;
                       </p>
                       <p className="text-sm font-medium mt-2">— Lisa Wang, Managing Partner</p>
                     </div>
@@ -284,7 +284,7 @@ export default function CaseStudies() {
             Ready for Your Success Story?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's discuss how we can achieve similar results for your business.
+            Let&apos;s discuss how we can achieve similar results for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>

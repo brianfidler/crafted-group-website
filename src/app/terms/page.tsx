@@ -105,7 +105,7 @@ export default function TermsOfService() {
 
           <h2>Warranties and Disclaimers</h2>
           <p>
-            Our services are provided "as is" without warranties of any kind, either
+            Our services are provided &quot;as is&quot; without warranties of any kind, either
             express or implied. We do not guarantee that our services will be
             uninterrupted, error-free, or meet all your expectations.
           </p>

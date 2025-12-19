@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto max-w-4xl prose prose-lg dark:prose-invert">
           <h2>Introduction</h2>
           <p>
-            Crafted Group ("we," "our," or "us") respects your privacy and is committed to
+            Crafted Group (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to
             protecting your personal data. This privacy policy explains how we collect, use,
             and safeguard your information when you visit our website or use our services.
           </p>
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
             for the privacy practices of these external sites.
           </p>
 
-          <h2>Children's Privacy</h2>
+          <h2>Children&apos;s Privacy</h2>
           <p>
             Our services are not directed to individuals under 18. We do not knowingly
             collect personal information from children.

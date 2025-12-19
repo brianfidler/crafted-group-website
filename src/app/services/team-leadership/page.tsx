@@ -599,7 +599,7 @@ export default function TeamLeadership() {
             Ready to Transform Your Marketing Team?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's develop the leadership capabilities and team culture that drive 
+            Let&apos;s develop the leadership capabilities and team culture that drive 
             exceptional marketing performance and business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

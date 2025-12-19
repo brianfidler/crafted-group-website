@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function FunnelBuilding() {
   return (
@@ -695,7 +695,7 @@ export default function FunnelBuilding() {
             Ready to Build High-Converting Funnels?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's create strategic funnel systems that transform prospects into loyal customers 
+            Let&apos;s create strategic funnel systems that transform prospects into loyal customers 
             and drive sustainable revenue growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -36,7 +36,7 @@ export default function Contact() {
       <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/50">
         <div className="container mx-auto text-center max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Let's Discuss Your Growth
+            Let&apos;s Discuss Your Growth
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Ready to transform your marketing? Schedule a free strategy call or send me a message.
@@ -55,7 +55,7 @@ export default function Contact() {
                 <CardHeader>
                   <CardTitle className="text-2xl">Send a Message</CardTitle>
                   <p className="text-muted-foreground">
-                    Prefer to send details first? Fill out this form and I'll respond within 24 hours.
+                    Prefer to send details first? Fill out this form and I&apos;ll respond within 24 hours.
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -275,15 +275,15 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  After our initial strategy call, I can typically begin within 1-2 weeks. 
-                  We'll start with a comprehensive marketing audit and strategic planning phase.
+                  After our initial strategy call, I can typically begin within 1-2 weeks.
+                  We&apos;ll start with a comprehensive marketing audit and strategic planning phase.
                 </p>
               </CardContent>
             </Card>
             
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What's the minimum engagement period?</CardTitle>
+                <CardTitle className="text-lg">What&apos;s the minimum engagement period?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">

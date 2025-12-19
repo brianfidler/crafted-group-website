@@ -324,7 +324,7 @@ export default function Pricing() {
             
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">What's included in the monthly hours?</CardTitle>
+                <CardTitle className="text-lg">What&apos;s included in the monthly hours?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -341,7 +341,7 @@ export default function Pricing() {
               <CardContent>
                 <p className="text-muted-foreground">
                   No minimum ad spend required. I work with your existing budget and help optimize 
-                  allocation across channels. We'll discuss reasonable marketing budgets based on your growth goals.
+                  allocation across channels. We&apos;ll discuss reasonable marketing budgets based on your growth goals.
                 </p>
               </CardContent>
             </Card>

@@ -501,7 +501,7 @@ export default function MarketingStrategy() {
             Ready to Transform Your Marketing Strategy?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's develop a data-driven strategy that aligns with your business objectives 
+            Let&apos;s develop a data-driven strategy that aligns with your business objectives 
             and delivers measurable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

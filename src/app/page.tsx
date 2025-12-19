@@ -234,8 +234,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "Crafted Group transformed our online presence. We went from struggling 
-                  with an outdated website to having a modern, converting digital experience."
+                  &quot;Crafted Group transformed our online presence. We went from struggling
+                  with an outdated website to having a modern, converting digital experience.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -252,8 +252,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "The e-commerce platform Crafted Group built helped us scale from $100K 
-                  to $1M in online sales in 12 months. Their expertise is invaluable."
+                  &quot;The e-commerce platform Crafted Group built helped us scale from $100K
+                  to $1M in online sales in 12 months. Their expertise is invaluable.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -270,8 +270,8 @@ export default async function Home() {
                   </div>
                 </div>
                 <p className="text-muted-foreground">
-                  "Working with Crafted Group was like having a seasoned development team 
-                  on our side. Their expertise elevated our entire digital presence."
+                  &quot;Working with Crafted Group was like having a seasoned development team
+                  on our side. Their expertise elevated our entire digital presence.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -286,7 +286,7 @@ export default async function Home() {
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Let's discuss how expert design and development can accelerate your business.
+            Let&apos;s discuss how expert design and development can accelerate your business.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact">Start Your Project</Link>
